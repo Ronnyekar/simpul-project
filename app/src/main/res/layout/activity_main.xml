@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.TodoListApp.AppBarOverlay"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.TodoListApp.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/menufab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"
+        app:icon="@drawable/actionbuttonlogo"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/chatfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/black"
+        app:fabSize="normal"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/menufab"
+        app:layout_constraintEnd_toEndOf="@+id/menufab"
+        app:srcCompat="@drawable/ic_baseline_chat_24"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/chatfabtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Chat"
+        app:layout_constraintBottom_toBottomOf="@+id/chatfab"
+        app:layout_constraintEnd_toStartOf="@+id/chatfab"
+        app:layout_constraintTop_toTopOf="@+id/chatfab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/taskfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/black"
+        app:fabSize="normal"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/chatfab"
+        app:layout_constraintEnd_toEndOf="@+id/chatfab"
+        app:layout_constraintStart_toStartOf="@+id/chatfab"
+        app:srcCompat="@drawable/tasklogo"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/taskfabtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Task"
+        app:layout_constraintBottom_toBottomOf="@+id/taskfab"
+        app:layout_constraintEnd_toStartOf="@+id/taskfab"
+        app:layout_constraintTop_toTopOf="@+id/taskfab" />
+
+
+<!--    <include layout="@layout/content_main" />-->
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_marginEnd="@dimen/fab_margin"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
